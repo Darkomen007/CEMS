@@ -1,0 +1,521 @@
+<style> 
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e9eef5;
+  }
+
+  header {
+    background-color: #003f8a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .form-prepa {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  .form-prepa label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #003f8a;
+  }
+
+  .form-prepa input,
+  .form-prepa select,
+  .form-prepa textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .form-prepa button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .form-prepa button:hover {
+    background: #003f8a;
+  }
+
+  #curp {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    word-break: break-word;
+  }
+</style>
+
+<header>
+  <h1>Bienvenido a Tu Prepa, CEMS!</h1>
+</header>
+
+<!-- Botón de WhatsApp -->
+<div class="whatsapp-button">
+  <a href="https://wa.me/1xxxxxxxxxx?text=Hola%20quiero%20más%20información." target="_blank">
+    <button type="button" style="background-color: #25D366; color: white; font-size: 16px; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+      Contactar por WhatsApp
+    </button>
+  </a>
+</div>
+
+<form class="form-prepa" action="https://formspree.io/f/xqapvjql" method="POST">
+  <label>Nombre 1:</label>
+  <input type="text" name="nombre1" id="nombre1" required>
+
+  <label>Nombre 2:</label>
+  <input type="text" name="nombre2" id="nombre2">
+
+  <label>Apellido paterno:</label>
+  <input type="text" name="apellido_paterno" id="apellido_paterno" required>
+
+  <label>Apellido materno:</label>
+  <input type="text" name="apellido_materno" id="apellido_materno" required>
+
+  <label>Sexo:</label>
+  <select name="sexo" id="sexo" required>
+    <option value="">Selecciona tu sexo</option>
+    <option value="H">Hombre</option>
+    <option value="M">Mujer</option>
+  </select>
+
+  <label>Correo electrónico:</label>
+  <input type="email" name="correo" required>
+
+  <label>Teléfono:</label>
+  <input type="text" name="telefono" required>
+
+  <label>Escuela de procedencia:</label>
+  <input type="text" name="escuela" required>
+
+  <label>Fecha de nacimiento:</label>
+  <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+
+  <label>Edad:</label>
+  <input type="text" name="edad" id="edad" readonly>
+
+  <label>Estado de nacimiento:</label>
+  <select name="estado" id="estado" required>
+    <option value="">Selecciona un estado</option>
+    <option value="AS">Aguascalientes</option>
+    <option value="BC">Baja California</option>
+    <option value="BS">Baja California Sur</option>
+    <option value="CC">Campeche</option>
+    <option value="CL">Coahuila</option>
+    <option value="CM">Colima</option>
+    <option value="CS">Chiapas</option>
+    <option value="CH">Chihuahua</option>
+    <option value="DF">Ciudad de México</option>
+    <option value="DG">Durango</option>
+    <option value="GT">Guanajuato</option>
+    <option value="GR">Guerrero</option>
+    <option value="HG">Hidalgo</option>
+    <option value="JC">Jalisco</option>
+    <option value="MC">México</option>
+    <option value="MN">Michoacán</option>
+    <option value="MS">Morelos</option>
+    <option value="NT">Nayarit</option>
+    <option value="NL">Nuevo León</option>
+    <option value="OC">Oaxaca</option>
+    <option value="PL">Puebla</option>
+    <option value="QT">Querétaro</option>
+    <option value="QR">Quintana Roo</option>
+    <option value="SP">San Luis Potosí</option>
+    <option value="SL">Sinaloa</option>
+    <option value="SR">Sonora</option>
+    <option value="TC">Tabasco</option>
+    <option value="TS">Tamaulipas</option>
+    <option value="TL">Tlaxcala</option>
+    <option value="VZ">Veracruz</option>
+    <option value="YN">Yucatán</option>
+    <option value="ZS">Zacatecas</option>
+    <option value="NE">Nacido en el extranjero</option>
+  </select>
+
+  <label>Semestre:</label>
+  <select name="semestre" required>
+    <option value="">Selecciona un semestre</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+
+  <label>Comentarios (opcional):</label>
+  <textarea name="comentarios" rows="4"></textarea>
+
+  <label>CURP generada:</label>
+  <input type="text" id="curp_mostrada" readonly>
+
+  <!-- Campo oculto para enviar la CURP -->
+  <input type="hidden" name="curp" id="curp_oculta">
+
+  <button type="submit">Enviar registro</button>
+</form>
+
+<script>
+  const fechaInput = document.getElementById("fecha_nacimiento");
+  const edadInput = document.getElementById("edad");
+
+  fechaInput.addEventListener("change", () => {
+    const fechaNacimiento = new Date(fechaInput.value);
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const m = hoy.getMonth() - fechaNacimiento.getMonth();
+    if (m < 0 || (m === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+    }
+    edadInput.value = edad;
+    generarCURP();
+  });
+
+  document.querySelectorAll("#nombre1, #nombre2, #apellido_paterno, #apellido_materno, #estado, #sexo").forEach(el => {
+    el.addEventListener("input", generarCURP);
+  });
+
+  function generarCURP() {
+    const nombre1 = document.getElementById("nombre1").value.trim().toUpperCase();
+    const nombre2 = document.getElementById("nombre2").value.trim().toUpperCase();
+    const paterno = document.getElementById("apellido_paterno").value.trim().toUpperCase();
+    const materno = document.getElementById("apellido_materno").value.trim().toUpperCase();
+    const fecha = document.getElementById("fecha_nacimiento").value;
+    const estado = document.getElementById("estado").value;
+    const sexo = document.getElementById("sexo").value;
+
+    if (!(nombre1 && paterno && materno && fecha && estado && sexo)) return;
+
+    const fechaObj = new Date(fecha);
+    const yy = String(fechaObj.getFullYear()).slice(-2);
+    const mm = String(fechaObj.getMonth() + 1).padStart(2, '0');
+    const dd = String(fechaObj.getDate()).padStart(2, '0');
+
+    function primeraVocalInterna(palabra) {
+      const match = palabra.slice(1).match(/[AEIOU]/);
+      return match ? match[0] : 'X';
+    }
+
+    function primeraConsonanteInterna(palabra) {
+      const match = palabra.slice(1).match(/[BCDFGHJKLMNPQRSTVWXYZ]/);
+      return match ? match[0] : 'X';
+    }
+
+    const curp =
+      paterno.charAt(0) +
+      primeraVocalInterna(paterno) +
+      materno.charAt(0) +
+      nombre1.charAt(0) +
+      yy + mm + dd +
+      sexo +
+      estado +
+      primeraConsonanteInterna(paterno) +
+      primeraConsonanteInterna(materno) +
+      primeraConsonanteInterna(nombre1) +
+      "00";
+
+    document.getElementById("curp_mostrada").value = curp;
+    document.getElementById("curp_oculta").value = curp;
+  }
+
+  const malasPalabras = [
+    "puto", "puta", "pendejo", "pendeja", "idiota", "imbécil", "estúpido", "estupido",
+    "mierda", "chingar", "chingado", "cabron", "cabrona", "culero", "culera",
+    "fuck", "shit", "bitch", "asshole", "damn", "bastard", "fucker", "dick", <style> 
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e9eef5;
+  }
+
+  header {
+    background-color: #003f8a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .form-prepa {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+
+  .form-prepa label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #003f8a;
+  }
+
+  .form-prepa input,
+  .form-prepa select,
+  .form-prepa textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+
+  .form-prepa button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .form-prepa button:hover {
+    background: #003f8a;
+  }
+
+  #curp {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    word-break: break-word;
+  }
+</style>
+
+<header>
+  <h1>Bienvenido a Tu Prepa, CEMS!</h1>
+</header>
+
+<form class="form-prepa" action="https://formspree.io/f/xqapvjql" method="POST">
+  <label>Nombre 1:</label>
+  <input type="text" name="nombre1" id="nombre1" required>
+
+  <label>Nombre 2:</label>
+  <input type="text" name="nombre2" id="nombre2">
+
+  <label>Apellido paterno:</label>
+  <input type="text" name="apellido_paterno" id="apellido_paterno" required>
+
+  <label>Apellido materno:</label>
+  <input type="text" name="apellido_materno" id="apellido_materno" required>
+
+  <label>Sexo:</label>
+  <select name="sexo" id="sexo" required>
+    <option value="">Selecciona tu sexo</option>
+    <option value="H">Hombre</option>
+    <option value="M">Mujer</option>
+  </select>
+
+  <label>Correo electrónico:</label>
+  <input type="email" name="correo" required>
+
+  <label>Teléfono:</label>
+  <input type="text" name="telefono" required>
+
+  <label>Escuela de procedencia:</label>
+  <input type="text" name="escuela" required>
+
+  <label>Fecha de nacimiento:</label>
+  <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+
+  <label>Edad:</label>
+  <input type="text" name="edad" id="edad" readonly>
+
+  <label>Estado de nacimiento:</label>
+  <select name="estado" id="estado" required>
+    <option value="">Selecciona un estado</option>
+    <option value="AS">Aguascalientes</option>
+    <option value="BC">Baja California</option>
+    <option value="BS">Baja California Sur</option>
+    <option value="CC">Campeche</option>
+    <option value="CL">Coahuila</option>
+    <option value="CM">Colima</option>
+    <option value="CS">Chiapas</option>
+    <option value="CH">Chihuahua</option>
+    <option value="DF">Ciudad de México</option>
+    <option value="DG">Durango</option>
+    <option value="GT">Guanajuato</option>
+    <option value="GR">Guerrero</option>
+    <option value="HG">Hidalgo</option>
+    <option value="JC">Jalisco</option>
+    <option value="MC">México</option>
+    <option value="MN">Michoacán</option>
+    <option value="MS">Morelos</option>
+    <option value="NT">Nayarit</option>
+    <option value="NL">Nuevo León</option>
+    <option value="OC">Oaxaca</option>
+    <option value="PL">Puebla</option>
+    <option value="QT">Querétaro</option>
+    <option value="QR">Quintana Roo</option>
+    <option value="SP">San Luis Potosí</option>
+    <option value="SL">Sinaloa</option>
+    <option value="SR">Sonora</option>
+    <option value="TC">Tabasco</option>
+    <option value="TS">Tamaulipas</option>
+    <option value="TL">Tlaxcala</option>
+    <option value="VZ">Veracruz</option>
+    <option value="YN">Yucatán</option>
+    <option value="ZS">Zacatecas</option>
+    <option value="NE">Nacido en el extranjero</option>
+  </select>
+
+  <label>Semestre:</label>
+  <select name="semestre" required>
+    <option value="">Selecciona un semestre</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+
+  <label>Comentarios (opcional):</label>
+  <textarea name="comentarios" rows="4"></textarea>
+
+  <label>CURP generada:</label>
+  <input type="text" id="curp_mostrada" readonly>
+
+  <!-- Campo oculto para enviar la CURP -->
+  <input type="hidden" name="curp" id="curp_oculta">
+
+  <button type="submit">Enviar registro</button>
+</form>
+
+
+<script>
+  const fechaInput = document.getElementById("fecha_nacimiento");
+  const edadInput = document.getElementById("edad");
+
+  fechaInput.addEventListener("change", () => {
+    const fechaNacimiento = new Date(fechaInput.value);
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const m = hoy.getMonth() - fechaNacimiento.getMonth();
+    if (m < 0 || (m === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+    }
+    edadInput.value = edad;
+    generarCURP();
+  });
+
+  document.querySelectorAll("#nombre1, #nombre2, #apellido_paterno, #apellido_materno, #estado, #sexo").forEach(el => {
+    el.addEventListener("input", generarCURP);
+  });
+
+  function generarCURP() {
+    const nombre1 = document.getElementById("nombre1").value.trim().toUpperCase();
+    const nombre2 = document.getElementById("nombre2").value.trim().toUpperCase();
+    const paterno = document.getElementById("apellido_paterno").value.trim().toUpperCase();
+    const materno = document.getElementById("apellido_materno").value.trim().toUpperCase();
+    const fecha = document.getElementById("fecha_nacimiento").value;
+    const estado = document.getElementById("estado").value;
+    const sexo = document.getElementById("sexo").value;
+
+    if (!(nombre1 && paterno && materno && fecha && estado && sexo)) return;
+
+    const fechaObj = new Date(fecha);
+    const yy = String(fechaObj.getFullYear()).slice(-2);
+    const mm = String(fechaObj.getMonth() + 1).padStart(2, '0');
+    const dd = String(fechaObj.getDate()).padStart(2, '0');
+
+    function primeraVocalInterna(palabra) {
+      const match = palabra.slice(1).match(/[AEIOU]/);
+      return match ? match[0] : 'X';
+    }
+
+    function primeraConsonanteInterna(palabra) {
+      const match = palabra.slice(1).match(/[BCDFGHJKLMNPQRSTVWXYZ]/);
+      return match ? match[0] : 'X';
+    }
+
+    const curp =
+      paterno.charAt(0) +
+      primeraVocalInterna(paterno) +
+      materno.charAt(0) +
+      nombre1.charAt(0) +
+      yy + mm + dd +
+      sexo +
+      estado +
+      primeraConsonanteInterna(paterno) +
+      primeraConsonanteInterna(materno) +
+      primeraConsonanteInterna(nombre1) +
+      "00";
+
+    document.getElementById("curp_mostrada").value = curp;
+    document.getElementById("curp_oculta").value = curp;
+  }
+
+  const malasPalabras = [
+    "puto", "puta", "pendejo", "pendeja", "idiota", "imbécil", "estúpido", "estupido",
+    "mierda", "chingar", "chingado", "cabron", "cabrona", "culero", "culera",
+    "fuck", "shit", "bitch", "asshole", "damn", "bastard", "fucker", "dick", "suck",
+	"verga", "vergota", "panocha", "culo", "culero", "culera", "chupas", "reata", "mamadas", "mamar",
+	"chichis", "tetas", "pezon", "pucha", "madre"
+  ];
+
+  function contieneMalasPalabras(texto) {
+    const textoLimpio = texto.toLowerCase();
+    return malasPalabras.some(palabra => textoLimpio.includes(palabra));
+  }
+
+  document.querySelector(".form-prepa").addEventListener("submit", function (e) {
+    const camposTexto = this.querySelectorAll("input[type='text'], textarea");
+    for (let campo of camposTexto) {
+      if (contieneMalasPalabras(campo.value)) {
+        alert("Tu mensaje contiene palabras ofensivas. Por favor, corrígelo.");
+        campo.focus();
+        e.preventDefault();
+        return;
+      }
+    }
+  });
+</script>
+
+
+
+
